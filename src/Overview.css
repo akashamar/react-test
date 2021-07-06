@@ -1,0 +1,8 @@
+.overview {
+	width: 70%;
+	height: 100vh;
+}
+
+.overview > button {
+	margin-left: 5px;
+}
