@@ -3,6 +3,7 @@ name: React Test App
 on:
   push:
     branches: [ master ]
+    tags: [ 'v*.*.*' ]
   pull_request:
     branches: [ master ]
 
@@ -19,5 +20,6 @@ jobs:
       with:
         image: akashamar/website
         registry: docker.io
+        tags: ${{ steps.meta.outputs.tags }}
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
